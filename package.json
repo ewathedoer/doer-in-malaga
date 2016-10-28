@@ -1,0 +1,28 @@
+{
+  "name": "doer_in_malaga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/EwaMitulskaWojcik/doer_in_Malaga.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/EwaMitulskaWojcik/doer_in_Malaga/issues"
+  },
+  "homepage": "https://gitlab.com/EwaMitulskaWojcik/doer_in_Malaga#README",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

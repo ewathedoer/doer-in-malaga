@@ -1,0 +1,715 @@
+html, body, .pure-g, .pure-g [class *="pure-u"] {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+body {
+    background: url(../images/bg.jpg) repeat fixed;
+}
+h2 {
+    font-weight: 700;
+}
+p {
+    font-weight: 300;
+    line-height: 1.5;
+}
+/* the cover movie part */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    background: url(../images/EMW.jpg) no-repeat center center;
+    background-size: cover;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+.hidden {
+    display: none !important;
+}
+#movie {
+    /*z-index: -1000;*/
+}
+
+/* the navigation style details */
+.custom-menu-wrapper {
+    background-color: #808080;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-link:focus,
+.custom-menu .pure-menu-link:active {
+    background-color: #45bbdf; /* the color from the doer's template */
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+.pure-menu-active>.pure-menu-link, .pure-menu-link:hover, .pure-menu-link:focus, .pure-menu-link:active {
+    background-color:  transparent;
+}
+/* media queries to nav */
+@media (max-width: 62em) {
+    .custom-menu {
+        display: block;
+    }
+
+    .custom-menu-toggle {
+        display: block;
+    }
+
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #808080\9;
+        z-index: 100;
+    }
+
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+        display: none;
+    }
+}
+.menu-center {
+    text-align: center;
+}
+
+/* border radius for navigation hover */
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-link:focus,
+.custom-menu .pure-menu-link:active {
+    border-radius: 15px;
+}
+.custom-menu-wrapper {
+    background-color: rgba(150, 150, 150, 0.7);
+}
+
+/* screens and their relativeness */
+.screen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: white;
+}
+.screen > div {
+    height: 100%;
+}
+.screen > div > * {
+    position: relative;
+}
+#screen2 {
+    top: 120%;
+}
+#screen3 {
+    top: 240%;
+}
+#screen3 > div > *,
+#screen4 > div > *,
+#screen5 > div > *{
+    height: 100%;
+}
+#screen4 {
+    top: 360%;
+}
+#screen5 {
+    top: 480%;
+}
+
+/* footer style */
+footer {
+    position: absolute;
+    top: 580%;
+    height: 100px;
+    width: 100%;
+}
+footer {
+    background-color: #808080;
+}
+#footer {
+    text-align: center;
+    padding: 10px 30px;
+}
+.scalefooter img {
+    height: 60px;
+}
+.scalefooter {
+    margin-top: 10px;
+    display: inline-block;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#twitter {
+    padding-left: 30px;
+}
+
+.scalefooter:hover,
+.scalefooter:focus {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1;
+    transition: all 1s;
+}
+
+#copyright {
+    position: absolute;
+    right: 3%;
+    bottom: 20px;
+    font-size: 1.2em;
+    color: white;
+
+}
+@media screen and (min-width: 62.01em) {
+   .custom-menu-screen {
+    display: none;
+   }
+}
+
+.create {
+    color: white;
+    font-size: 1.5em;
+    font-stretch: expanded;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: transparent;
+    border: solid;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    display: inline-block;
+    padding: 3%;
+    border-radius: 25px;
+    text-align: center;
+}
+.create:hover,
+.create:focus,
+.create:active {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+#portfolio, #linkedin {
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.cell i {
+    margin-right: 5px;
+}
+.cell a:hover,
+.cell a:focus,
+.cell a:active {
+    background-color: rgba(84,187,255,0.7);
+}
+.cell a {
+    padding: 2%;
+    border-radius: 15px;
+}
+.pure-g {
+    letter-spacing: normal;
+}
+#screen2 >  div > div {
+    display: table;
+    width: 60%;
+    margin: 0 auto;
+}
+#parentweb {
+    height: 100%;
+}
+#screen2 >  div h2 {
+    font-size: 2em;
+}
+#screen2 >  div p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 90%;
+    padding-left: 5%;
+}
+#photos {
+    width: 100%;
+    background-image: url(../images/lifestyle.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#parentphotos {
+    position: absolute;
+    width: 30%;
+    min-width: 170px;
+    margin: 0 auto;
+    bottom: 10%;
+    left: 60%;
+    color: white;
+    padding: 3%;
+    border-radius: 15px;
+    background: rgba(143,102,162,0.9);
+    text-align: center;
+}
+#parentphotos h2, #parenttrip h2 {
+    font-size: 2em;
+    font-weight: bold;
+    font-stretch: expanded;
+}
+#parentphotos p {
+    font-size: 1.2em;
+}
+.icon {
+    margin-right: 5px;
+}
+#gallery:hover,
+#gallery:focus,
+#gallery:active {
+    background-color: rgba(84,187,255,0.7);
+}
+#screen3 {
+    color: white;
+}
+#trip {
+    min-width: 100%;
+    background-image: url(../images/trip.JPG);
+    background-position:left;
+    background-size: cover;
+}
+.linkhidden {
+    text-decoration: none;
+    color: rgb(95,46,102);
+    font-weight: bolder;
+    font-stretch: extra-expanded;
+    border: 1px dotted rgb(84,187,255);
+    background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.linkhidden:hover,
+.linkhidden:focus,
+.linkhidden:active {
+    color: white;
+    background-color: rgba(84,187,255,0.7);
+}
+#trip {
+    height: 100%;
+}
+#parenttrip {
+    width: 35%;
+    min-width: 170px;
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+    background-color: rgba(84,187,255,0.7);
+    padding: 3%;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+#parenttrip p {
+    text-align: justify;
+}
+#parenttrip p span a {
+    border-radius: 15px;
+}
+#parenttrip p span:hover,
+#parenttrip p span:focus,
+#parenttrip p span:active {
+    background-color: rgb(95,46,102);
+    border-radius: 15px;
+}
+#parenttrip a:hover,
+#parenttrip a:focus,
+#parenttrip a:active {
+    background-color: rgba(84,187,255,0.7);
+    color: white;
+}
+#back-home {
+    color: #FFF;
+}
+/* music - languages - heart menu item */
+#music {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+#parentmusic {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/thedoer.jpg);
+    background-size: cover;
+    position: right;
+}
+#parentmusic > div {
+    width: 23%;
+    min-width: 210px;
+    padding: 5%;
+    margin-top: 3%;
+    margin-left: 5%;
+    background: rgba(36,35,40,0.5);
+    border-radius:15px;
+}
+#parentmusic > div > h2 {
+    font-size: 2em;
+}
+#parentmusic > div > p {
+    font-size: 1.2em;
+}
+#parentmusic a:hover,
+#parentmusic a:focus,
+#parentmusic a:active {
+    background-color: rgba(84,187,255,0.7);
+}
+#english, #spanish, #polish {
+    margin-right: 3.5%;
+    margin-bottom: 3.5%;
+}
+.pure-button {
+    border-radius: 15px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 62.01em) {
+    #parentphotos p, #parenttrip p, #parentmusic > div > p {
+        display: none;
+    }
+    .cell a {
+        padding: 5%;
+    }
+}
+@media screen and (max-width: 48em) {
+    #parentphotos h2, #parenttrip h2, #parentmusic > div> h2 {
+        font-size: 1.2em;
+    }
+    #screen2 > div p {
+        font-size: 1em;
+    }
+    #screen2 > div > div {
+        width: 87%;
+    }
+}
+@media screen and (min-width: 1161px) {
+    .cell a {
+        margin-top: 3%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #parentmusic {
+        background-image: url(../images/thedoer.jpg);
+        background-position: right;
+    }
+}
+@media screen and (max-width: 530px) {
+    #parentphotos {
+        left: 39%;
+    }
+    .create {
+        right: 6%;
+    }
+}
+@media screen and (max-width: 1090px) {
+    .languages {
+        text-align: center;
+    }
+    .parentmusic > div {
+        margin-top: 1%;
+    }
+}
+@media screen and (max-width: 919px){
+    #copyright {
+        display: none;
+    }
+}
+@media screen and (max-width: 376px){
+    #twitter, #facebook{
+        display: none;
+    }
+}
+/* landscape on i-phones */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+       #sing {
+        display: none;
+      }
+}
+
+
+/* ipad portret */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      #parentphotos p, #parenttrip p, #parentmusic > div > p {
+        display: block;
+    }
+      #parentmusic > div  {
+        margin-top: 20%;
+      }
+      #parentmusic > div {
+        margin-top: 25%;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #parentphotos p, #parenttrip p, #parentmusic > div > p {
+        display: block;
+      }
+     #parentphotos h2, #parenttrip h2, #parentmusic > div> h2 {
+        font-size: 2em;
+    }
+      .#english, #spanish, #polish {
+        margin-bottom: 14%;
+      }
+}
+
+/*ipad horizontally */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #parentmusic > div {
+        margin-top: 25%;
+    }
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      #parentmusic > div {
+        margin-top: 15%;
+    }
+}
+/* ipad mini */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #parentmusic > div {
+        margin-top: 25%;
+    }
+      #parentmusic > div > p {
+        display: none;
+    }
+}
+
+/* phone portrait */
+@media screen
+  and (max-device-width: 414px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      #parentmusic > div {
+        margin-top: 25%;
+    }
+}
+
+@media screen
+  and (max-device-width: 414px)
+  and (max-device-height: 668px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      #parentmusic > div {
+        margin-top: 25%;
+    }
+}
+
+/* mobile screen divider width */
+@media screen and (max-device-width: 1024px){
+    #screen2 {
+        top: 100%;
+    }
+    #screen3 {
+        top: 200%;
+    }
+    #screen3 > div > *,
+    #screen4 > div > *,
+    #screen5 > div > *{
+        height: 100%;
+    }
+    #screen4 {
+        top: 300%;
+    }
+    #screen5 {
+        top: 400%;
+    }
+
+    /* footer style */
+    footer {
+        position: absolute;
+        top: 500%;
+    }
+}
